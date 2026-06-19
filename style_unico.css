@@ -1,0 +1,50 @@
+  body { 
+    font-family: Arial; 
+    text-align: center;
+    background: #283618; 
+    color: white; 
+    padding: 40px; 
+}
+  h1 { font-size: 3rem; 
+    color: #606c38; }
+
+  input { padding: 10px; 
+    font-size: 1.2rem;
+    border-radius: 8px; 
+    border: 2px solid #582f0e; 
+}
+  button { padding: 10px 30px; 
+    background: #582f0e;
+    color: white; 
+    border: none;
+    border-radius: 8px; 
+    font-size: 1rem;
+    cursor: pointer; 
+}
+
+#content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px;               
+    width: 1100px;          
+    max-width: 95%;     
+    margin: 30px auto 0 auto;
+
+}
+.resposta {
+    font-size: 1.6rem;       
+    background-color: #582f0e; 
+    color: #d3d3c8;
+    border: #936639 solid 2px;  
+    border-radius: 6px;
+    width: 100%;            
+    height: 95px;            
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;  
+}
+.resposta:nth-child(5){
+grid-column-start: 1;
+
+}
