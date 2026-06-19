@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="style_unico.css">
+</head>
+<body>
+    <h1> Todas operações Básicas </h1>
+  <input id="valor1" placeholder="Digite o valor 1">
+  <input id="valor2" placeholder="Digite o valor 2">
+   
+  <button id="btn">Calcular</button>
+  <div id="content">
+
+    <p id="soma" class="resposta"></p>
+    <p id="subtracao" class="resposta"></p>
+    <p id="multiplicacao" class="resposta"></p>
+    <p id="divisao" class="resposta"></p>
+    <p id="potencia" class="resposta"></p>
+    <p id="CAIXA" class="resposta"></p>
+    <p id="parimp" class="resposta"></p>
+  </div>
+  
+  <script>
+
+    document.getElementById("btn").addEventListener("click", function() {
+      const v1 = Number(document.getElementById("valor1").value);
+      const v2 = Number(document.getElementById("valor2").value);
+        if (isNaN(v1) || isNaN(v2)) {
+         alert("⚠️ Digite apenas números!");
+        return;
+        }
+        if (v2 === 0) {
+         alert("⚠️ v2 não pode ser 0");
+        return;
+        } 
+
+        let msg = "";
+        if(v1 > v2){
+          msg = "v1 é maior que v2";
+        }else if(v2 > v1){
+          msg = "v2 é maior que v1";
+        }else{
+          msg = "v1 e v2 são iguais";
+        }
+
+
+        let res = (v1 % 2 === 0) ? "Par" : "Impar";
+
+      document.getElementById("soma").innerHTML         = "Soma: "           + (v1 + v2);
+      document.getElementById("subtracao").innerHTML    = "Subtração: "      + (v1 - v2);
+      document.getElementById("multiplicacao").innerHTML= "Multiplicação: "  + (v1 * v2);
+      document.getElementById("divisao").innerHTML      = "Divisão: "        + (v1 / v2);
+      document.getElementById("potencia").innerHTML     = "Potência: "       + (v1 ** v2);
+      document.getElementById("CAIXA").innerHTML     =  msg;
+      document.getElementById("parimp").innerHTML     =  "v1 é " + res;
+    });
+  </script>
+</body>
+</html>
+
